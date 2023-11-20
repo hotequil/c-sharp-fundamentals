@@ -90,3 +90,28 @@ Console.WriteLine(secondConsoleValueConverted);
 
 ConsoleKeyInfo key = Console.ReadKey();
 Console.WriteLine(key.KeyChar);
+
+int day = 28;
+int month = 6;
+int sum = day + month;
+int subtraction = day - month;
+int multiplication = day * month;
+int integerDivision = day / month;
+float division = (float)day / month;
+int mod = day % month;
+
+Console.WriteLine(sum);
+Console.WriteLine(subtraction);
+Console.WriteLine(multiplication);
+Console.WriteLine(integerDivision);
+Console.WriteLine(division);
+Console.WriteLine(mod);
+
+Console.WriteLine(day);
+Console.WriteLine(month);
+
+day++;
+month--;
+
+Console.WriteLine(day);
+Console.WriteLine(month);
