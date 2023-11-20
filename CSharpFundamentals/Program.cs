@@ -139,3 +139,18 @@ Console.WriteLine(rightBitOperator);
 Console.WriteLine(leftBitOperator);
 Console.WriteLine(five);
 Console.WriteLine(notFive);
+
+bool isDayBiggerThanMonth = day > month;
+
+Console.WriteLine(isDayBiggerThanMonth);
+
+bool hasLicenseDriver  = true;
+bool hasCar = false;
+
+Console.WriteLine(hasLicenseDriver && hasCar);
+Console.WriteLine(hasLicenseDriver & hasCar); // optimized
+Console.WriteLine(hasLicenseDriver || hasCar);
+Console.WriteLine(hasLicenseDriver | hasCar); // optimized
+Console.WriteLine(hasLicenseDriver ^ hasCar);
+Console.WriteLine(!hasLicenseDriver);
+Console.WriteLine(!hasCar);
