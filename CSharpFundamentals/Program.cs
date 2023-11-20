@@ -116,7 +116,26 @@ month--;
 Console.WriteLine(day);
 Console.WriteLine(month);
 
+day--;
+month++;
+
 string phrase = "I Like " + "C#";
 phrase += " so much";
 
 Console.WriteLine(phrase);
+
+int andBitOperator = day & month;
+int orBitOperator = day | month;
+int xorBitOperator = day ^ month;
+int rightBitOperator = day >> month;
+int leftBitOperator = day << month;
+uint five = 0b_0101;
+uint notFive = ~five;
+
+Console.WriteLine(andBitOperator);
+Console.WriteLine(orBitOperator);
+Console.WriteLine(xorBitOperator);
+Console.WriteLine(rightBitOperator);
+Console.WriteLine(leftBitOperator);
+Console.WriteLine(five);
+Console.WriteLine(notFive);
