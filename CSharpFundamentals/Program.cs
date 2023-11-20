@@ -154,3 +154,16 @@ Console.WriteLine(hasLicenseDriver | hasCar); // optimized
 Console.WriteLine(hasLicenseDriver ^ hasCar);
 Console.WriteLine(!hasLicenseDriver);
 Console.WriteLine(!hasCar);
+
+string text = "This is cool";
+
+Console.WriteLine(text.Length);
+Console.WriteLine(text.ToUpper());
+Console.WriteLine(text.ToLower());
+Console.WriteLine(text.IndexOf("is"));
+Console.WriteLine(text.Substring(0, 4));
+Console.WriteLine("\"" + text + "\"");
+Console.WriteLine($"\"{text}\"");
+Console.WriteLine("C:\\Temp\\File.txt");
+Console.WriteLine("Break line!\n\n\n");
+Console.WriteLine("Tab 1\tTab 2\tTab 3");
