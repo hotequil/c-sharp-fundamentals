@@ -167,3 +167,7 @@ Console.WriteLine($"\"{text}\"");
 Console.WriteLine("C:\\Temp\\File.txt");
 Console.WriteLine("Break line!\n\n\n");
 Console.WriteLine("Tab 1\tTab 2\tTab 3");
+
+if (age == 18) Console.WriteLine("Almost...");
+else if (age > 18) Console.WriteLine("Is over 18 years!");
+else Console.WriteLine("Isn't in legal age!");
