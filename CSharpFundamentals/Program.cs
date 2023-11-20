@@ -203,3 +203,42 @@ switch (weekday)
         Console.WriteLine("Invalid weekday");
         break;
 }
+
+var counter = 0;
+
+while (counter < 10)
+{
+    Console.WriteLine($"First counter: {counter}");
+    counter++;
+}
+
+counter = 0;
+
+do
+{
+    Console.WriteLine($"Second counter: {counter}");
+    counter++;
+} while (counter < 10);
+
+for (int index = 0; index < 10; index++)
+{
+    if(index == 4) continue;
+    if(index == 8) break;
+    
+    Console.WriteLine($"First index: {index}");
+}
+
+string[] techs = { "C#", "JavaScript", "HTML", "React" };
+
+techs[3] = "CSS";
+
+Console.WriteLine(techs[2]);
+
+foreach(string tech in techs) Console.WriteLine(tech);
+
+string[] letters = { "a", "b", "c" };
+letters = new string[6];
+letters = new string[4]{ "a", "b", "c", "d" };
+
+for (int index = 0; index < letters.Length; index++) Console.WriteLine(letters[index]);
+foreach(string letter in letters) Console.WriteLine(letter);
