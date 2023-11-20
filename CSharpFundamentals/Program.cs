@@ -171,3 +171,35 @@ Console.WriteLine("Tab 1\tTab 2\tTab 3");
 if (age == 18) Console.WriteLine("Almost...");
 else if (age > 18) Console.WriteLine("Is over 18 years!");
 else Console.WriteLine("Isn't in legal age!");
+
+Random random = new Random();
+
+int weekday = random.Next(1, 8);
+
+switch (weekday)
+{
+    case 1:
+        Console.WriteLine("Sunday");
+        break;
+    case 2:
+        Console.WriteLine("Monday");
+        break;
+    case 3:
+        Console.WriteLine("Tuesday");
+        break;
+    case 4:
+        Console.WriteLine("Wednesday");
+        break;
+    case 5:
+        Console.WriteLine("Thursday");
+        break;
+    case 6:
+        Console.WriteLine("Friday");
+        break;
+    case 7:
+        Console.WriteLine("Saturday");
+        break;
+    default:
+        Console.WriteLine("Invalid weekday");
+        break;
+}
