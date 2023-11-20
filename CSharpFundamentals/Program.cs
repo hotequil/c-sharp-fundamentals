@@ -79,3 +79,14 @@ Console.WriteLine(weightAsInt);
 Console.WriteLine(weightAsIntConverted);
 Console.WriteLine(weightAsString);
 Console.WriteLine(weightAsDoubleConverted);
+
+string firstConsoleValue = Console.ReadLine();
+double firstConsoleValueConverted = Convert.ToDouble(firstConsoleValue);
+string secondConsoleValue = Console.ReadLine();
+int secondConsoleValueConverted = Convert.ToInt32(secondConsoleValue);
+
+Console.WriteLine(firstConsoleValueConverted);
+Console.WriteLine(secondConsoleValueConverted);
+
+ConsoleKeyInfo key = Console.ReadKey();
+Console.WriteLine(key.KeyChar);
