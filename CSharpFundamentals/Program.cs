@@ -51,3 +51,31 @@ Console.WriteLine(firstDotNumber);
 Console.WriteLine(secondDotNumber);
 Console.WriteLine(thirdDotNumber);
 Console.WriteLine(fourthDotNumber);
+
+short favoriteNumber = 7;
+int favoriteNumberAsInt = favoriteNumber;
+double favoriteNumberAsDouble = favoriteNumberAsInt;
+
+Console.WriteLine(favoriteNumber);
+Console.WriteLine(favoriteNumberAsInt);
+Console.WriteLine(favoriteNumberAsDouble);
+
+double gradeNumber = 2.75;
+int gradeNumberAsInt = (int)gradeNumber;
+short gradeNumberAsShort = (short)gradeNumberAsInt;
+
+Console.WriteLine(gradeNumber);
+Console.WriteLine(gradeNumberAsInt);
+Console.WriteLine(gradeNumberAsShort);
+
+double weight = 76.8;
+int weightAsInt = (int)weight;
+int weightAsIntConverted = Convert.ToInt32(weight);
+string weightAsString = "76.8";
+double weightAsDoubleConverted = Convert.ToDouble(weightAsString);
+
+Console.WriteLine(weight);
+Console.WriteLine(weightAsInt);
+Console.WriteLine(weightAsIntConverted);
+Console.WriteLine(weightAsString);
+Console.WriteLine(weightAsDoubleConverted);
