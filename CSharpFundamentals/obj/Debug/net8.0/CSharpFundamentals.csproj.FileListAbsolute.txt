@@ -1,0 +1,15 @@
+/home/hotequil/git/c-sharp-fundamentals/CSharpFundamentals/bin/Debug/net8.0/CSharpFundamentals
+/home/hotequil/git/c-sharp-fundamentals/CSharpFundamentals/bin/Debug/net8.0/CSharpFundamentals.deps.json
+/home/hotequil/git/c-sharp-fundamentals/CSharpFundamentals/bin/Debug/net8.0/CSharpFundamentals.runtimeconfig.json
+/home/hotequil/git/c-sharp-fundamentals/CSharpFundamentals/bin/Debug/net8.0/CSharpFundamentals.dll
+/home/hotequil/git/c-sharp-fundamentals/CSharpFundamentals/bin/Debug/net8.0/CSharpFundamentals.pdb
+/home/hotequil/git/c-sharp-fundamentals/CSharpFundamentals/obj/Debug/net8.0/CSharpFundamentals.GeneratedMSBuildEditorConfig.editorconfig
+/home/hotequil/git/c-sharp-fundamentals/CSharpFundamentals/obj/Debug/net8.0/CSharpFundamentals.AssemblyInfoInputs.cache
+/home/hotequil/git/c-sharp-fundamentals/CSharpFundamentals/obj/Debug/net8.0/CSharpFundamentals.AssemblyInfo.cs
+/home/hotequil/git/c-sharp-fundamentals/CSharpFundamentals/obj/Debug/net8.0/CSharpFundamentals.csproj.CoreCompileInputs.cache
+/home/hotequil/git/c-sharp-fundamentals/CSharpFundamentals/obj/Debug/net8.0/CSharpFundamentals.sourcelink.json
+/home/hotequil/git/c-sharp-fundamentals/CSharpFundamentals/obj/Debug/net8.0/CSharpFundamentals.dll
+/home/hotequil/git/c-sharp-fundamentals/CSharpFundamentals/obj/Debug/net8.0/refint/CSharpFundamentals.dll
+/home/hotequil/git/c-sharp-fundamentals/CSharpFundamentals/obj/Debug/net8.0/CSharpFundamentals.pdb
+/home/hotequil/git/c-sharp-fundamentals/CSharpFundamentals/obj/Debug/net8.0/CSharpFundamentals.genruntimeconfig.cache
+/home/hotequil/git/c-sharp-fundamentals/CSharpFundamentals/obj/Debug/net8.0/ref/CSharpFundamentals.dll
