@@ -242,3 +242,15 @@ letters = new string[4]{ "a", "b", "c", "d" };
 
 for (int index = 0; index < letters.Length; index++) Console.WriteLine(letters[index]);
 foreach(string letter in letters) Console.WriteLine(letter);
+
+int[] numbers = { 10, 32, 12, 65, 78, 34, 56 };
+
+Console.WriteLine(numbers.Max());
+Console.WriteLine(numbers.Min());
+Console.WriteLine(numbers.Sum());
+Console.WriteLine(numbers.Average());
+Console.WriteLine(numbers.Count());
+
+Array.Sort(numbers);
+
+foreach (int number in numbers) Console.WriteLine(number);
