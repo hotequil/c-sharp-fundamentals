@@ -115,3 +115,8 @@ month--;
 
 Console.WriteLine(day);
 Console.WriteLine(month);
+
+string phrase = "I Like " + "C#";
+phrase += " so much";
+
+Console.WriteLine(phrase);
