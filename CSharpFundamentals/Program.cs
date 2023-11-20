@@ -5,12 +5,18 @@ year = 2023;
 
 string name = "João Paulo", surname = "Hotequil";
 const int birthYear = 2002;
+bool isLegalAge = true;
+char firstLetter = 'J';
+var firstName = "João";
 
 Console.WriteLine("Hello, World!");
 Console.WriteLine(age);
 Console.WriteLine(year);
 Console.WriteLine($"{name} {surname}");
 Console.WriteLine(birthYear);
+Console.WriteLine(isLegalAge);
+Console.WriteLine(firstLetter);
+Console.WriteLine(firstName);
 
 sbyte firstNumber = 127;
 short secondNumber = 32767;
