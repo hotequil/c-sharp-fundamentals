@@ -289,8 +289,21 @@ namespace Application
             foreach (Weekday weekdayItem in Enum.GetValues(typeof(Weekday))) Console.WriteLine($"{weekdayItem}: {(int)weekdayItem}");
             
             var firstObject = new InternalClass();
+            var secondObject = new InternalClass();
 
+            firstObject.name = "João Paulo Hotequil";
+            firstObject.age = 21;
+
+            secondObject.name = "Test";
+            secondObject.age = 50;
+            
             firstObject.ShowData();
+            secondObject.ShowData();
+
+            Console.WriteLine(firstObject.IsLegalAge());
+            Console.WriteLine(secondObject.IsLegalAge());
+            Console.WriteLine(firstObject.IsOlderThan(secondObject));
+            Console.WriteLine(firstObject.GetDifference(secondObject));
         }
     }
 }
