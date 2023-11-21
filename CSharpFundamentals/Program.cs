@@ -306,6 +306,7 @@ namespace Application
             Console.WriteLine(firstObject.GetDifference(secondObject));
             Console.WriteLine(firstObject.Sum(12, 8));
             Console.WriteLine(firstObject.Sum(12));
+            Console.WriteLine(firstObject.Sum(secondNumber: 20, firstNumber: 30));
 
             int refNumber = 10;
             
