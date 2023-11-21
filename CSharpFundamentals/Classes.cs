@@ -42,7 +42,8 @@ namespace Application
     public class PublicPerson
     {
         private int age;
-
+        public string Name { get; set; }
+        
         public PublicPerson()
         {
             Console.WriteLine("Person without age");

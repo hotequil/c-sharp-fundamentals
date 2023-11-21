@@ -319,7 +319,10 @@ namespace Application
             
             firstPublicPerson.ShowAge();
             secondPublicPerson.ShowAge();
+
+            firstPublicPerson.Name = "João Paulo Hotequil";
             
+            Console.WriteLine(firstPublicPerson.Name);
             Console.WriteLine(StaticClass.GetFavoriteNumber());
         }
     }
