@@ -313,6 +313,14 @@ namespace Application
             
             Console.WriteLine(firstObject.Subtracion(ref refNumber, 2));
             Console.WriteLine(refNumber);
+
+            var firstPublicPerson = new PublicPerson();
+            var secondPublicPerson = new PublicPerson(30);
+            
+            firstPublicPerson.ShowAge();
+            secondPublicPerson.ShowAge();
+            
+            Console.WriteLine(StaticClass.GetFavoriteNumber());
         }
     }
 }

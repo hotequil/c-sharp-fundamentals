@@ -37,9 +37,38 @@ namespace Application
         {
             return firstNumber -= secondNumber;
         }
-    } 
-    
-    public class PublicClass {}
+    }
 
-    public static class StaticClass {}
+    public class PublicPerson
+    {
+        private int age;
+
+        public PublicPerson()
+        {
+            Console.WriteLine("Person without age");
+        }
+
+        public PublicPerson(int age) : this()
+        {
+            this.age = age;
+        }
+
+        public void ShowAge()
+        {
+            Console.WriteLine(age);
+        }
+
+        ~PublicPerson()
+        {
+            Console.WriteLine("PublicPerson was destructed!");
+        }
+    }
+
+    public static class StaticClass
+    {
+        public static int GetFavoriteNumber()
+        {
+            return 7;
+        }
+    }
 }
