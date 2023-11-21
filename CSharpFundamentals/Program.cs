@@ -298,6 +298,7 @@ namespace Application
             secondObject.age = 50;
             
             firstObject.ShowData();
+            firstObject.ShowData(true);
             secondObject.ShowData();
 
             Console.WriteLine(firstObject.IsLegalAge());

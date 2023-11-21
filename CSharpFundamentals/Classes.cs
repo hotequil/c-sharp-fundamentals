@@ -7,9 +7,9 @@ namespace Application
         public string name;
         public int age;
 
-        public void ShowData()
+        public void ShowData(bool isUpperCase = false)
         {
-            Console.WriteLine($"Name: {name}");
+            Console.WriteLine($"Name: {(isUpperCase ? name.ToUpper() : name)}");
             Console.WriteLine($"Age: {age}");
         }
 
