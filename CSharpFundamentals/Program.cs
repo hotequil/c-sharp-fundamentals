@@ -304,6 +304,13 @@ namespace Application
             Console.WriteLine(secondObject.IsLegalAge());
             Console.WriteLine(firstObject.IsOlderThan(secondObject));
             Console.WriteLine(firstObject.GetDifference(secondObject));
+            Console.WriteLine(firstObject.Sum(12, 8));
+            Console.WriteLine(firstObject.Sum(12));
+
+            int refNumber = 10;
+            
+            Console.WriteLine(firstObject.Subtracion(ref refNumber, 2));
+            Console.WriteLine(refNumber);
         }
     }
 }
