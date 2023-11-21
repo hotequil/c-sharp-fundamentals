@@ -324,6 +324,10 @@ namespace Application
             
             Console.WriteLine(firstPublicPerson.Name);
             Console.WriteLine(StaticClass.GetFavoriteNumber());
+
+            var descendant = new Descendant(21, 7, "João Paulo Hotequil");
+            
+            descendant.ShowDescendantData();
         }
     }
 }

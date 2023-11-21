@@ -72,4 +72,38 @@ namespace Application
             return 7;
         }
     }
+
+    sealed class Descendant : Ancestral
+    {
+        private readonly string _name;
+
+        public Descendant(int age, int favoriteNumber, string name) : base(age, favoriteNumber)
+        {
+            _name = name;
+        }
+
+        public void ShowDescendantData()
+        {
+            ShowAncestralData();
+            Console.WriteLine($"Favorite number: {FavoriteNumber}");
+            Console.WriteLine($"Name: {_name}");
+        }
+    }
+    
+    internal class Ancestral
+    {
+        private readonly int _age;
+        protected readonly int FavoriteNumber;
+
+        protected Ancestral(int age, int favoriteNumber)
+        {
+            _age = age;
+            FavoriteNumber = favoriteNumber;
+        }
+
+        protected void ShowAncestralData()
+        {
+            Console.WriteLine($"Age: {_age}");
+        }
+    }
 }
