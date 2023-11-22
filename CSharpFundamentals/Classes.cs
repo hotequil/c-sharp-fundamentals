@@ -106,4 +106,25 @@ namespace Application
             Console.WriteLine($"Age: {_age}");
         }
     }
+
+    internal class BadRequestError : Error
+    {
+        public override string? Name { get; set; }
+
+        public override void ShowMessage()
+        {
+            Console.WriteLine($"Bad request: {Name}");
+        }
+    }
+
+    internal abstract class Error
+    {
+        public abstract string? Name { get; set; }
+        public abstract void ShowMessage();
+        
+        public bool HasName()
+        {
+            return !String.IsNullOrEmpty(Name);
+        }
+    }
 }

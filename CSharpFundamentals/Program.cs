@@ -328,6 +328,18 @@ namespace Application
             var descendant = new Descendant(21, 7, "João Paulo Hotequil");
             
             descendant.ShowDescendantData();
+
+            var badRequestError = new BadRequestError();
+
+            Console.WriteLine(badRequestError.HasName());
+            Console.WriteLine(badRequestError.Name);
+            
+            badRequestError.Name = "A simple error in a request. HTTP code is 400";
+            
+            Console.WriteLine(badRequestError.HasName());
+            Console.WriteLine(badRequestError.Name);
+            
+            badRequestError.ShowMessage();
         }
     }
 }
