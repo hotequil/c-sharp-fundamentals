@@ -395,6 +395,52 @@ namespace Application
             {
                 client?.Dispose();
             }
+
+            var firstItem = "First item";
+            
+            List<string> listCollection = new List<string>();
+            Queue<string> queueCollection = new Queue<string>();
+            Stack<string> stackCollection = new Stack<string>();
+            Dictionary<string, string> dictionaryCollection = new Dictionary<string, string>();
+            SortedList<string, string> sortedListCollection = new SortedList<string, string>();
+            
+            listCollection.Add(firstItem);
+            queueCollection.Enqueue(firstItem);
+            stackCollection.Push(firstItem);
+            dictionaryCollection.Add(firstItem, firstItem);
+            sortedListCollection.Add(firstItem, firstItem);
+
+            Console.WriteLine(listCollection.Count);
+            Console.WriteLine(queueCollection.Count);
+            Console.WriteLine(stackCollection.Count);
+            Console.WriteLine(dictionaryCollection.Count);
+            Console.WriteLine(sortedListCollection.Count);
+
+            Console.WriteLine(listCollection.Contains(firstItem));
+            Console.WriteLine(queueCollection.Contains(firstItem));
+            Console.WriteLine(stackCollection.Contains(firstItem));
+            Console.WriteLine(dictionaryCollection.ContainsKey(firstItem));
+            Console.WriteLine(dictionaryCollection.ContainsValue(firstItem));
+            Console.WriteLine(sortedListCollection.ContainsKey(firstItem));
+            Console.WriteLine(sortedListCollection.ContainsValue(firstItem));
+            
+            Console.WriteLine(listCollection[0]);
+            Console.WriteLine(queueCollection.Dequeue());
+            Console.WriteLine(stackCollection.Pop());
+            Console.WriteLine(dictionaryCollection[firstItem]);
+            Console.WriteLine(sortedListCollection[firstItem]);
+
+            listCollection.Clear();
+            queueCollection.Clear();
+            stackCollection.Clear();
+            dictionaryCollection.Clear();
+            sortedListCollection.Clear();
+            
+            Console.WriteLine(listCollection.Count);
+            Console.WriteLine(queueCollection.Count);
+            Console.WriteLine(stackCollection.Count);
+            Console.WriteLine(dictionaryCollection.Count);
+            Console.WriteLine(sortedListCollection.Count);
         }
     }
 }
