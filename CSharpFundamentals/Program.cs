@@ -503,6 +503,18 @@ namespace Application
             Console.WriteLine("Grades");
 
             foreach (var grade in grades.Where(grade => grade.Equals(10))) Console.WriteLine($"Grade: {grade}");
+            
+            Console.WriteLine("Grades");
+
+            foreach (var grade in grades.Where(grade => grade >= 6)) Console.WriteLine($"Grade: {grade}");
+
+            Console.WriteLine($"Grades average above or equal 8: {grades.Where(grade => grade >= 8).Average()}");
+
+            var defaultGrade = grades.SingleOrDefault(grade => grade.Equals(2.35));
+            var singleGrade = grades.SingleOrDefault(grade => grade.Equals(10));
+
+            Console.WriteLine($"Default grade: {defaultGrade}");
+            Console.WriteLine($"Single grade: {singleGrade}");
         }
     }
 }
