@@ -357,6 +357,25 @@ namespace Application
             names.Add("Paulo");
 
             foreach (var nameItem in names) Console.WriteLine(nameItem);
+
+            int divider = random.Next(0, 2);
+
+            try
+            {
+                double result = 2 / divider;
+                
+                Console.WriteLine($"Result: {result}");
+            }
+            catch (DivideByZeroException exception)
+            {
+                Console.WriteLine(exception.Message);
+                Console.WriteLine("DivideByZeroException");
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+                Console.WriteLine("Exception");
+            }
         }
     }
 }
