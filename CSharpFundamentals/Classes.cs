@@ -127,4 +127,35 @@ namespace Application
             return !String.IsNullOrEmpty(Name);
         }
     }
+
+    internal class ListDetails : IList, IDetails
+    {
+        public void Get()
+        {
+            Console.WriteLine("Get items!");
+        }
+
+        public void CreatePagination()
+        {
+            Console.WriteLine("Pagination was created!");
+        }
+        
+        public void GetOne()
+        {
+            Console.WriteLine("Get one item!");
+        }
+    }
+
+    internal class Details : IDetails
+    {
+        public void GetOne()
+        {
+            Console.WriteLine("Get one item!");
+        }
+
+        public void GetByToken()
+        {
+            Console.WriteLine("Get by token!");
+        }
+    }
 }

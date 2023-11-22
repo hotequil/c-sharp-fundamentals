@@ -340,6 +340,23 @@ namespace Application
             Console.WriteLine(badRequestError.Name);
             
             badRequestError.ShowMessage();
+
+            var listDetails = new ListDetails();
+            IDetails details = new Details();
+            
+            listDetails.Get();
+            listDetails.CreatePagination();
+            listDetails.GetOne();
+            details.GetOne();
+
+            if (details is Details) (details as Details).GetByToken();
+
+            List<string> names = new List<string>{ "Hotequil" };
+            
+            names.Add("João");
+            names.Add("Paulo");
+
+            foreach (var nameItem in names) Console.WriteLine(nameItem);
         }
     }
 }
