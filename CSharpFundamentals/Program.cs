@@ -488,6 +488,17 @@ namespace Application
             Console.WriteLine($"Grades average: {grades.Average()}");
             Console.WriteLine($"Max grade: {grades.Max()}");
             Console.WriteLine($"Min grade: {grades.Min()}");
+            Console.WriteLine("Grades");
+            
+            foreach (var grade in grades.OrderBy(grade => grade)) Console.WriteLine($"Grade: {grade}");
+            
+            Console.WriteLine("Grades");
+            
+            foreach (var grade in grades.OrderByDescending(grade => grade)) Console.WriteLine($"Grade: {grade}");
+
+            var paginatedGrades = grades.Skip(4).Take(2);
+            
+            Console.WriteLine(paginatedGrades);
         }
     }
 }
