@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Sockets;
 
 namespace Application
 {
@@ -375,6 +376,24 @@ namespace Application
             {
                 Console.WriteLine(exception.Message);
                 Console.WriteLine("Exception");
+            }
+            
+            TcpClient client = null;
+
+            try
+            {
+                client = new TcpClient("127.0.0.1", 25);
+                
+                Console.WriteLine($"Connected! {client.ToString()}");
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+                Console.WriteLine("Connection error");
+            }
+            finally
+            {
+                client?.Dispose();
             }
         }
     }
