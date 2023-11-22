@@ -397,7 +397,8 @@ namespace Application
             }
 
             var firstItem = "First item";
-            
+            var secondItem = "Second item";
+
             List<string> listCollection = new List<string>();
             Queue<string> queueCollection = new Queue<string>();
             Stack<string> stackCollection = new Stack<string>();
@@ -410,6 +411,29 @@ namespace Application
             dictionaryCollection.Add(firstItem, firstItem);
             sortedListCollection.Add(firstItem, firstItem);
 
+            listCollection.AddRange(new List<string>{ secondItem });
+            listCollection.Insert(2, firstItem);
+            listCollection.InsertRange(3, new List<string>{ firstItem, firstItem, firstItem, firstItem, firstItem, firstItem });
+            Console.WriteLine($"List collection exists: {listCollection.Exists(item => item == firstItem)}");
+            Console.WriteLine($"List collection find: {listCollection.Find(item => item == firstItem)}");
+            Console.WriteLine($"List collection findLast: {listCollection.FindLast(item => item == firstItem)}");
+            Console.WriteLine($"List collection findAll: {listCollection.FindAll(item => item == firstItem)}");
+            Console.WriteLine($"List collection findIndex: {listCollection.FindIndex(item => item == firstItem)}");
+            Console.WriteLine($"List collection findLastIndex: {listCollection.FindLastIndex(item => item == firstItem)}");
+            Console.WriteLine($"List collection indexOf: {listCollection.IndexOf(firstItem)}");
+            Console.WriteLine($"List collection lastIndexOf: {listCollection.LastIndexOf(firstItem)}");
+            Console.WriteLine($"List collection capacity: {listCollection.Capacity}");
+
+            foreach (var item in listCollection) Console.WriteLine($"Normal item: {item}");
+            
+            listCollection.Reverse();
+
+            foreach (var item in listCollection) Console.WriteLine($"Reversed item: {item}");
+            
+            listCollection.Sort();
+            
+            foreach (var item in listCollection) Console.WriteLine($"Sort item: {item}");
+            
             Console.WriteLine(listCollection.Count);
             Console.WriteLine(queueCollection.Count);
             Console.WriteLine(stackCollection.Count);
@@ -429,6 +453,12 @@ namespace Application
             Console.WriteLine(stackCollection.Pop());
             Console.WriteLine(dictionaryCollection[firstItem]);
             Console.WriteLine(sortedListCollection[firstItem]);
+
+            listCollection.RemoveAt(0);
+            listCollection.RemoveRange(0, 2);
+            
+            Console.WriteLine($"List collection remove: {listCollection.Remove(firstItem)}");
+            Console.WriteLine($"List collection removeAll: {listCollection.RemoveAll(item => item == firstItem)}");
 
             listCollection.Clear();
             queueCollection.Clear();
