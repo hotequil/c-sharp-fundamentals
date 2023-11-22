@@ -515,6 +515,43 @@ namespace Application
 
             Console.WriteLine($"Default grade: {defaultGrade}");
             Console.WriteLine($"Single grade: {singleGrade}");
+
+            var size = 100;
+            var threads = new List<Thread>();
+            var tasks = new List<Task<int>>();
+            
+            Console.WriteLine("Threads");
+
+            for (int index = 0; index < size; index++)
+            {
+                var currentIndex = index;
+
+                threads.Add(new Thread(() => ExecuteSomething(currentIndex)));
+            }
+
+            foreach (var thread in threads) thread.Start();
+            foreach (var thread in threads) thread.Join();
+            
+            Console.WriteLine("Tasks");
+            
+            for (int index = 0; index < size; index++)
+            {
+                var currentIndex = index;
+
+                tasks.Add(Task.Run(() =>
+                {
+                    ExecuteSomething(currentIndex, true);
+
+                    return currentIndex;
+                }));
+            }
+
+            foreach (var task in tasks) Console.WriteLine(task.Result);
+        }
+
+        static void ExecuteSomething(int index, bool hideLog = false)
+        {
+            if (!hideLog) Console.WriteLine(index);
         }
     }
 }
