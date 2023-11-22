@@ -496,9 +496,13 @@ namespace Application
             
             foreach (var grade in grades.OrderByDescending(grade => grade)) Console.WriteLine($"Grade: {grade}");
 
-            var paginatedGrades = grades.Skip(4).Take(2);
-            
-            Console.WriteLine(paginatedGrades);
+            Console.WriteLine("Grades");
+
+            foreach (var grade in grades.Skip(4).Take(2)) Console.WriteLine($"Grade: {grade}");
+
+            Console.WriteLine("Grades");
+
+            foreach (var grade in grades.Where(grade => grade.Equals(10))) Console.WriteLine($"Grade: {grade}");
         }
     }
 }
