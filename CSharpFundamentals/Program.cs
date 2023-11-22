@@ -471,6 +471,23 @@ namespace Application
             Console.WriteLine(stackCollection.Count);
             Console.WriteLine(dictionaryCollection.Count);
             Console.WriteLine(sortedListCollection.Count);
+            
+            List<double> grades = new List<double>();
+            
+            grades.Add(8);
+            grades.Add(8.6);
+            grades.Add(5.2);
+            grades.Add(3.25);
+            grades.Add(2);
+            grades.Add(10);
+            grades.Add(6.8);
+            grades.Add(7);
+            
+            Console.WriteLine($"Grades sum: {grades.Sum()}");
+            Console.WriteLine($"Grades approved: {grades.Count(grade => grade >= 6)}");
+            Console.WriteLine($"Grades average: {grades.Average()}");
+            Console.WriteLine($"Max grade: {grades.Max()}");
+            Console.WriteLine($"Min grade: {grades.Min()}");
         }
     }
 }
