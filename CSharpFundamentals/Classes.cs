@@ -158,4 +158,26 @@ namespace Application
             Console.WriteLine("Get by token!");
         }
     }
+
+    internal class Product
+    {
+        public delegate void OnChangePrice(double newPrice, double oldPrice);
+        public event OnChangePrice? OnChangePriceEvent;
+        private double _price;
+
+        public double Price
+        {
+            get { return _price; }
+            set
+            {
+                if(value <= 0) return;
+                
+                var oldPrice = _price;
+                _price = value;
+                
+                if(OnChangePriceEvent != null)
+                    OnChangePriceEvent.Invoke(_price, oldPrice);
+            }
+        }
+    }
 }

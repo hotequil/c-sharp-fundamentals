@@ -564,6 +564,15 @@ namespace Application
             multiBinaryOperation += Multiply;
 
             multiBinaryOperation(5, 4);
+            
+            Console.WriteLine("Product");
+
+            var product = new Product();
+
+            product.OnChangePriceEvent += NotifyIfPriceDecreases;
+            product.Price = 10;
+            product.Price = 4;
+            product.Price = 6;
         }
 
         static void ExecuteSomething(int index, bool hideLog = false)
@@ -590,5 +599,12 @@ namespace Application
         }
         
         delegate double BinaryOperation(double firstNumber, double secondNumber);
+
+        static void NotifyIfPriceDecreases(double newPrice, double oldPrice)
+        {
+            if(newPrice >= oldPrice) return;
+            
+            Console.WriteLine($"The price was {oldPrice:F2}, but now it's {newPrice:F2}!");
+        }
     }
 }
