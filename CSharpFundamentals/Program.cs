@@ -555,7 +555,15 @@ namespace Application
             operationsList.Add(new BinaryOperation(Sum));
             operationsList.Add(new BinaryOperation(Multiply));
 
-            foreach (var operation in operationsList) Console.WriteLine(operation(10, 2));
+            foreach (var operation in operationsList) operation(10, 2);
+
+            Console.WriteLine("Multi binary operation");
+            
+            BinaryOperation multiBinaryOperation = Sum;
+
+            multiBinaryOperation += Multiply;
+
+            multiBinaryOperation(5, 4);
         }
 
         static void ExecuteSomething(int index, bool hideLog = false)
@@ -565,12 +573,20 @@ namespace Application
 
         static double Sum(double firstNumber, double secondNumber)
         {
-            return firstNumber + secondNumber;
+            var result = firstNumber + secondNumber;
+            
+            Console.WriteLine(result);
+
+            return result;
         }
         
         static double Multiply(double firstNumber, double secondNumber)
         {
-            return firstNumber * secondNumber;
+            var result = firstNumber * secondNumber;
+            
+            Console.WriteLine(result);
+            
+            return result;
         }
         
         delegate double BinaryOperation(double firstNumber, double secondNumber);
