@@ -547,11 +547,32 @@ namespace Application
             }
 
             foreach (var task in tasks) Console.WriteLine(task.Result);
+
+            Console.WriteLine("Operations");
+            
+            var operationsList = new List<BinaryOperation>();
+            
+            operationsList.Add(new BinaryOperation(Sum));
+            operationsList.Add(new BinaryOperation(Multiply));
+
+            foreach (var operation in operationsList) Console.WriteLine(operation(10, 2));
         }
 
         static void ExecuteSomething(int index, bool hideLog = false)
         {
             if (!hideLog) Console.WriteLine(index);
         }
+
+        static double Sum(double firstNumber, double secondNumber)
+        {
+            return firstNumber + secondNumber;
+        }
+        
+        static double Multiply(double firstNumber, double secondNumber)
+        {
+            return firstNumber * secondNumber;
+        }
+        
+        delegate double BinaryOperation(double firstNumber, double secondNumber);
     }
 }
